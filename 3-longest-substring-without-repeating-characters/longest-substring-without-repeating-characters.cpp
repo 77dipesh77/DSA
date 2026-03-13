@@ -4,12 +4,11 @@ public:
         
         int l = 0;
         int r = 0;
-        int maxi = 0;
         map<char,int> mpp;
+        int maxi = 0;
 
         while(r < s.size()) {
             mpp[s[r]]++;
-            
             while(mpp[s[r]] > 1) {
                 mpp[s[l]]--;
                 if(mpp[s[l]] == 0) mpp.erase(s[l]);
@@ -20,4 +19,5 @@ public:
         }
         return maxi;
     }
+
 };
